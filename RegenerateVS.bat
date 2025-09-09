@@ -1,0 +1,1 @@
+"C:\MNBD\UE\UE5\UE_5.5\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.exe" -projectfiles -project="C:\MNBD\UE\Projects\LANTestTask\LANTestTask.uproject" -game -rocket -progress
