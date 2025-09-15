@@ -7,11 +7,12 @@
 #include "PTCMatchGameState.generated.h"
 
 UENUM(BlueprintType)
-enum MatchState
+enum class EMatchState : uint8
 {
 	Lobby	UMETA(DisplayName = "Lobby"),
 	Match UMETA(DisplayName = "Match"),
-	PostMatch UMETA(DisplayName = "PostMatch")
+	PostMatch UMETA(DisplayName = "PostMatch"),
+	None UMETA(DisplayName = "None") // None of the above, like Main Menu
 };
 
 /**
@@ -32,17 +33,17 @@ public:
 
 	/*
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = PTC)
-	bool GetIsPostGame() const { return bIsPostGame; }
+	EMatchState GetMatchState() const { return MatchState; }
 
 	UFUNCTION(BlueprintCallable, Category = PTC)
-	void SetIsPostGame(int32 NewPostGameFlag) { bIsPostGame = NewPostGameFlag; }
-	*/
+	void SetMatchState(EMatchState NewMatchState) { MatchState = NewMatchState; }*/
+	
 
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PTC)
 	int32 PlayerCount;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PTC)
-	//bool bIsPostGame;
+	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = PTC)
+	//EMatchState MatchState = EMatchState::None;
 };
