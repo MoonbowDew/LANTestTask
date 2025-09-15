@@ -11,7 +11,11 @@ What's been implemented:
 
 TODO:
 -Lobby
+
 -End of the game
+
 -Timer
+
 -Health
+
 -Shooting
